@@ -1,0 +1,9 @@
+Data license: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+
+Source images and annotations: COCO (Common Objects in Context)
+val2017 split, https://cocodataset.org -- Copyright (c) 2017 COCO
+Consortium, licensed CC BY 4.0.
+
+This repository's own additions (gen_split.py, README.md, the Parquet
+packaging) are provided under the same CC BY 4.0 terms as the underlying
+data.
