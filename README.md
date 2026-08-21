@@ -16,7 +16,6 @@
 > holdout, so no subset of this is both trainable and clean. A keypoint training set has to be
 > built rather than filtered out of this one. RFD 0122 records what builds it.
 
-
 Train/test split for RF-DETR keypoint-detection finetuning
 ([rf-detr-cpp](https://github.com/weftspun/rf-detr-cpp)), sourced from
 [COCO val2017](https://cocodataset.org) `person_keypoints_val2017.json` --
@@ -43,16 +42,16 @@ reproduces the same split exactly.
 
 ## Schema (per row)
 
-| column | type | meaning |
-|---|---|---|
-| `image_id` | int64 | COCO image id |
-| `file_name` | string | original COCO file name |
-| `width`, `height` | int32 | image dimensions (px) |
-| `image_bytes` | binary | the JPEG file, byte-identical to the COCO val2017 release -- no re-encode/resize applied by this repo |
-| `category_id` | list<int64> | one entry per person instance (always COCO category 1) |
-| `bbox_xywh` | list<list<float>> | COCO-native `[x, y, w, h]`, absolute pixels |
-| `keypoints` | list<list<float>> | one flat `[x, y, v]` * 17 array per instance, COCO's keypoint order |
-| `num_keypoints` | list<int64> | count of labeled (v>0) keypoints per instance |
+| column            | type              | meaning                                                                                               |
+| ----------------- | ----------------- | ----------------------------------------------------------------------------------------------------- |
+| `image_id`        | int64             | COCO image id                                                                                         |
+| `file_name`       | string            | original COCO file name                                                                               |
+| `width`, `height` | int32             | image dimensions (px)                                                                                 |
+| `image_bytes`     | binary            | the JPEG file, byte-identical to the COCO val2017 release -- no re-encode/resize applied by this repo |
+| `category_id`     | list<int64>       | one entry per person instance (always COCO category 1)                                                |
+| `bbox_xywh`       | list<list<float>> | COCO-native `[x, y, w, h]`, absolute pixels                                                           |
+| `keypoints`       | list<list<float>> | one flat `[x, y, v]` \* 17 array per instance, COCO's keypoint order                                  |
+| `num_keypoints`   | list<int64>       | count of labeled (v>0) keypoints per instance                                                         |
 
 ## Loading
 
