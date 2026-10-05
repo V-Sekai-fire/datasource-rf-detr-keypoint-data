@@ -10,7 +10,7 @@ Each row holds the original JPEG bytes and that image's person boxes and keypoin
 
 ## Rebuild it
 
-`gen_split.py` regenerates the files deterministically from a local val2017 image directory and its keypoint annotations. It needs `pyarrow` and `pillow`.
+`gen_split.py` regenerates the files deterministically from a local val2017 image directory and its keypoint annotations. It needs `pyarrow`.
 
 ```sh
 python gen_split.py keypoint <val2017-dir> <person_keypoints_val2017.json>
@@ -18,4 +18,4 @@ python gen_split.py keypoint <val2017-dir> <person_keypoints_val2017.json>
 
 ## Licence
 
-The annotations are CC BY 4.0, as LICENSE.txt states. Each image keeps the licence COCO records for it, and most of those forbid commercial use or derivatives.
+LICENSE.txt names CC BY 4.0 for the images and the annotations, which overstates it for the images. The annotations are CC BY 4.0. Each image keeps the licence COCO records for it, that per-image licence governs it, and most of those forbid commercial use or derivatives.
